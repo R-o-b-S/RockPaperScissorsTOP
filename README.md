@@ -1,1 +1,1 @@
-In this repository I'm going to do the TOP Project Rock Papaer Scissors
+In this repository I'm going to do the TOP Project Rock Paper Scissors
