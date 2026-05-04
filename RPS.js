@@ -60,7 +60,20 @@ function playRound () {
     }
 }
 
-playRound()
-console.log("Score: Human " + humanScore + "; " + "Computer " + computerScore)
+function playGame () {
+    for (let i = 0 ; i < 5; i++) {
+        playRound();
+        console.log("Score: Human " + humanScore + "; " + "Computer " + computerScore);
+    }
+}
 
-
+playGame ()
+if (humanScore > computerScore){
+        console.log("The final winner is Human Player!")
+    }
+if (computerScore > humanScore){
+        console.log("The final winner is Computer Player!")
+    }
+if (computerScore == humanScore){
+        console.log("There is no winner")
+    }
