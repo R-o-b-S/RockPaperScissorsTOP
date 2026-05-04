@@ -30,24 +30,30 @@ function playRound () {
     }
     if (HChoice == "rock" && CChoice == "paper") {
         console.log("Computer player wins!");
+        computerScore = computerScore+1;
     }
     if (HChoice == "rock" && CChoice == "scissors") {
         console.log("Human player wins!");
+        humanScore = humanScore+1;
     }
     if (HChoice == "paper" && CChoice == "rock") {
         console.log("Human player wins!");
+        humanScore = humanScore+1;
     }
     if (HChoice == "paper" && CChoice == "paper") {
         console.log("No one wins");
     }
     if (HChoice == "paper" && CChoice == "scissors") {
         console.log("Computer player wins!");
+        computerScore = computerScore+1;
     }
     if (HChoice == "scissors" && CChoice == "rock") {
         console.log("Computer player wins!");
+        computerScore = computerScore+1;
     }
     if (HChoice == "scissors" && CChoice == "paper") {
         console.log("Human player wins!");
+        humanScore = humanScore+1;
     }
     if (HChoice == "scissors" && CChoice == "scissors") {
         console.log("No one wins");
@@ -55,4 +61,6 @@ function playRound () {
 }
 
 playRound()
+console.log("Score: Human " + humanScore + "; " + "Computer " + computerScore)
+
 
