@@ -13,19 +13,23 @@ function getComputerChoice() {
     //if statements to convert the random number in a choice
 }
 
-let HChoice = document.querySelector('#humanchoice');
-HChoice.addEventListener('click', (event) => {
-    let target = event.target;
+let HChoice = "-";
 
+let humanchoice = document.querySelector('#humanchoice');
+humanchoice.addEventListener('click', (event) => {
+    let target = event.target;
     switch(target.id) {
-        case 'rock':
-            console.log('rock');
+        case "rock":
+            HChoice = "rock";
+            //console.log(HChoice);
             break;
-        case 'paper':
-            console.log('paper');
+        case "paper":
+            HChoice = "paper";
+            //console.log(HChoice);
             break;
-        case 'scissors':
-            console.log('scissors');
+        case "scissors":
+            HChoice = "scissors";
+            //console.log(HChoice);
             break;
     }
 });
@@ -33,9 +37,7 @@ HChoice.addEventListener('click', (event) => {
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound () {
-    const HChoice = getHumanChoice().toLowerCase(); //call function and lower txt cases
-    console.log(HChoice);
+function playRound (HChoice) {
     const CChoice = getComputerChoice();
     console.log(CChoice);
     if (HChoice == "rock" && CChoice == "rock") {
