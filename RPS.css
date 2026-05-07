@@ -9,4 +9,17 @@
 
 #humanchoice {
     padding: 25px 25px 25px 25px;
+    flex-direction: column;
+}
+
+.p {
+    display: flex;
+}
+
+.button {
+    display: flex;
+}
+
+#buttons {
+    display: flex;
 }

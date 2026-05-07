@@ -21,15 +21,15 @@ humanchoice.addEventListener('click', (event) => {
     switch(target.id) {
         case "rock":
             HChoice = "rock";
-            //console.log(HChoice);
+            document.getElementById("HC").textContent = "You choose: rock";
             break;
         case "paper":
             HChoice = "paper";
-            //console.log(HChoice);
+            document.getElementById("HC").textContent = "You choose: paper";
             break;
         case "scissors":
             HChoice = "scissors";
-            //console.log(HChoice);
+            document.getElementById("HC").textContent = "You choose: scissors";
             break;
     }
 });
