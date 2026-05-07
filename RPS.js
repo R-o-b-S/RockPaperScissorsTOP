@@ -13,9 +13,22 @@ function getComputerChoice() {
     //if statements to convert the random number in a choice
 }
 
-function getHumanChoice() {
-    return window.prompt("rock, paper, scissors?"); //ask human player for choice
-}
+let HChoice = document.querySelector('#humanchoice');
+HChoice.addEventListener('click', (event) => {
+    let target = event.target;
+
+    switch(target.id) {
+        case 'rock':
+            console.log('rock');
+            break;
+        case 'paper':
+            console.log('paper');
+            break;
+        case 'scissors':
+            console.log('scissors');
+            break;
+    }
+});
 
 let humanScore = 0;
 let computerScore = 0;
@@ -60,20 +73,22 @@ function playRound () {
     }
 }
 
-function playGame () {
-    for (let i = 0 ; i < 5; i++) {
-        playRound();
-        console.log("Score: Human " + humanScore + "; " + "Computer " + computerScore);
-    }
-}
+playRound();
 
-playGame ()
-if (humanScore > computerScore){
-        console.log("The final winner is Human Player!")
-    }
-if (computerScore > humanScore){
-        console.log("The final winner is Computer Player!")
-    }
-if (computerScore == humanScore){
-        console.log("There is no winner")
-    }
+//function playGame () {
+  //  for (let i = 0 ; i < 5; i++) {
+    // 
+      //  console.log("Score: Human " + humanScore + "; " + "Computer " + computerScore);
+    //}
+//}
+
+// playGame ()
+// if (humanScore > computerScore){
+   //     console.log("The final winner is Human Player!")
+    //}
+// if (computerScore > humanScore){
+   //     console.log("The final winner is Computer Player!")
+    //}
+//if (computerScore == humanScore){
+ //       console.log("There is no winner")
+   // }

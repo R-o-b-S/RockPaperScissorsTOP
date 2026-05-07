@@ -1,0 +1,12 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    border-color: lightseagreen;
+    border-radius: 25px;
+}
+
+#humanchoice {
+    padding: 25px 25px 25px 25px;
+}
