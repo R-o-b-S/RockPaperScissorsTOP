@@ -39,6 +39,26 @@ humanchoice.addEventListener('click', (event) => {
     }
 });
 
+//score check to end game, hs=humanscore cs=computerscore
+function scoreCheck (hs,cs) {
+    if (hs === 5) {
+        window.alert("You won! Press OK to play again");
+        humanScore = 0;
+        computerScore = 0;
+        document.getElementById("scorenow").textContent = "Human: " + humanScore + " - Computer: " + computerScore;
+    }
+    else if (cs ===5) {
+        window.alert("Computer won! Press OK to play again");
+        humanScore = 0;
+        computerScore = 0;
+        document.getElementById("scorenow").textContent = "Human: " + humanScore + " - Computer: " + computerScore;
+    }
+    else {
+        
+    }
+}
+
+//main game loop
 function playRound (HChoice) {
     const CChoice = getComputerChoice();
     document.getElementById("CC").textContent = "Your opponent choose: " + CChoice;
@@ -49,16 +69,19 @@ function playRound (HChoice) {
         document.getElementById("winner").textContent = "The winner is: computer player";
         computerScore = computerScore+1;
         document.getElementById("scorenow").textContent = "Human: " + humanScore + " - Computer: " + computerScore;
+        scoreCheck (humanScore, computerScore);
     }
     if (HChoice == "rock" && CChoice == "scissors") {
         document.getElementById("winner").textContent = "The winner is: human player";
         humanScore = humanScore+1;
         document.getElementById("scorenow").textContent = "Human: " + humanScore + " - Computer: " + computerScore;
+        scoreCheck (humanScore, computerScore);
     }
     if (HChoice == "paper" && CChoice == "rock") {
         document.getElementById("winner").textContent = "The winner is: human player";
         humanScore = humanScore+1;
         document.getElementById("scorenow").textContent = "Human: " + humanScore + " - Computer: " + computerScore;
+        scoreCheck (humanScore, computerScore);
     }
     if (HChoice == "paper" && CChoice == "paper") {
         document.getElementById("winner").textContent = "No one wins";
@@ -67,16 +90,19 @@ function playRound (HChoice) {
         document.getElementById("winner").textContent = "The winner is: computer player";
         computerScore = computerScore+1;
         document.getElementById("scorenow").textContent = "Human: " + humanScore + " - Computer: " + computerScore;
+        scoreCheck (humanScore, computerScore);
     }
     if (HChoice == "scissors" && CChoice == "rock") {
         document.getElementById("winner").textContent = "The winner is: computer player";
         computerScore = computerScore+1;
         document.getElementById("scorenow").textContent = "Human: " + humanScore + " - Computer: " + computerScore;
+        scoreCheck (humanScore, computerScore);
     }
     if (HChoice == "scissors" && CChoice == "paper") {
         document.getElementById("winner").textContent = "The winner is: human player";
         humanScore = humanScore+1;
         document.getElementById("scorenow").textContent = "Human: " + humanScore + " - Computer: " + computerScore;
+        scoreCheck (humanScore, computerScore);
     }
     if (HChoice == "scissors" && CChoice == "scissors") {
         document.getElementById("winner").textContent = "No one wins";
