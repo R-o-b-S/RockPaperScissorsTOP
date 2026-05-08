@@ -4,32 +4,34 @@ function getComputerChoice() {
     if (nrand == 0) {
         return "rock";
     }
-    if (nrand == 1) {
+    else if (nrand == 1) {
         return "paper";
     }
-    if (nrand == 2) {
+    else if (nrand == 2) {
         return "scissors";
     }
-    //if statements to convert the random number in a choice
 }
 
 let HChoice = "-";
 
-let humanchoice = document.querySelector('#humanchoice');
+let humanchoice = document.querySelector("#humanchoice");
 humanchoice.addEventListener('click', (event) => {
     let target = event.target;
     switch(target.id) {
         case "rock":
             HChoice = "rock";
             document.getElementById("HC").textContent = "You choose: rock";
+            playRound (HChoice);
             break;
         case "paper":
             HChoice = "paper";
             document.getElementById("HC").textContent = "You choose: paper";
+            playRound (HChoice);
             break;
         case "scissors":
             HChoice = "scissors";
             document.getElementById("HC").textContent = "You choose: scissors";
+            playRound (HChoice);
             break;
     }
 });
@@ -39,7 +41,7 @@ let computerScore = 0;
 
 function playRound (HChoice) {
     const CChoice = getComputerChoice();
-    console.log(CChoice);
+    document.getElementById("CC").textContent = "Your opponent choose: " + CChoice;
     if (HChoice == "rock" && CChoice == "rock") {
         console.log("No one wins");
     }
@@ -74,23 +76,3 @@ function playRound (HChoice) {
         console.log("No one wins");
     }
 }
-
-playRound();
-
-//function playGame () {
-  //  for (let i = 0 ; i < 5; i++) {
-    // 
-      //  console.log("Score: Human " + humanScore + "; " + "Computer " + computerScore);
-    //}
-//}
-
-// playGame ()
-// if (humanScore > computerScore){
-   //     console.log("The final winner is Human Player!")
-    //}
-// if (computerScore > humanScore){
-   //     console.log("The final winner is Computer Player!")
-    //}
-//if (computerScore == humanScore){
- //       console.log("There is no winner")
-   // }

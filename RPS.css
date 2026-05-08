@@ -12,6 +12,10 @@
     flex-direction: column;
 }
 
+#computerchoice {
+    padding: 25px 25px 25px 25px;
+}
+
 .p {
     display: flex;
 }
