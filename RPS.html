@@ -8,18 +8,27 @@
     <script src="RPS.js" defer></script>
 </head>
 <body>
-    <div class="main" id="humanchoice">
-        <p>Choose your weapon:</p>
-        <div id="buttons">
-            <button class="choice" id="rock"> Rock </button>
-            <button class="choice" id="paper"> Paper </button>
-            <button class="choice" id="scissors"> Scissors </button>
+<div class="main" id="ui">
+    <div class="main" id="choicepanel">
+        <div class="main" id="humanchoice">
+            <p>Choose your weapon:</p>
+            <div id="buttons">
+                <button class="choice" id="rock"> Rock </button>
+                <button class="choice" id="paper"> Paper </button>
+                <button class="choice" id="scissors"> Scissors </button>
+            </div>
+            <p id="HC"> You choose: </p>
         </div>
-        <p id="HC"> You choose: </p>
+        <div class="main" id="computerchoice">
+            <p id="CC"> Your opponent choose: </p>
+        </div>
     </div>
-    <div class="main" id="computerchoice">
-        <p id="CC"> Your opponent choose: </p>
+    <div class="main" id="win">
+        <p id="winner"> The winner is: </p>
     </div>
-    
+    <div class="main" id="score">
+
+    </div>
+</div>
 </body>
 </html>

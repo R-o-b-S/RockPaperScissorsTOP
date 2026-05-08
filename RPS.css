@@ -2,18 +2,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#ui {
+    display: flex;
+    flex-direction: column;
+}
+
+#choicepanel {
+    display: flex;
+    flex-direction: row;
+}
+
+#humanchoice {
+    display: flex;
+    padding: 25px 25px 25px 25px;
+    flex-direction: column;
     border: solid;
     border-color: lightseagreen;
     border-radius: 25px;
 }
 
-#humanchoice {
-    padding: 25px 25px 25px 25px;
-    flex-direction: column;
-}
-
 #computerchoice {
+    display: flex;
     padding: 25px 25px 25px 25px;
+    border: solid;
+    border-color: lightcoral;
+    border-radius: 25px;
+    align-self: stretch;
 }
 
 .p {
@@ -26,4 +42,13 @@
 
 #buttons {
     display: flex;
+}
+
+#win {
+    display: flex;
+    padding: 25px 25px 25px 25px;
+    border: solid;
+    border-color: lightslategray;
+    border-radius: 25px;
+    align-self: stretch;
 }

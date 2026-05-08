@@ -43,36 +43,36 @@ function playRound (HChoice) {
     const CChoice = getComputerChoice();
     document.getElementById("CC").textContent = "Your opponent choose: " + CChoice;
     if (HChoice == "rock" && CChoice == "rock") {
-        console.log("No one wins");
+        document.getElementById("winner").textContent = "No one wins";
     }
     if (HChoice == "rock" && CChoice == "paper") {
-        console.log("Computer player wins!");
+        document.getElementById("winner").textContent = "The winner is: computer player";
         computerScore = computerScore+1;
     }
     if (HChoice == "rock" && CChoice == "scissors") {
-        console.log("Human player wins!");
+        document.getElementById("winner").textContent = "The winner is: human player";
         humanScore = humanScore+1;
     }
     if (HChoice == "paper" && CChoice == "rock") {
-        console.log("Human player wins!");
+        document.getElementById("winner").textContent = "The winner is: human player";
         humanScore = humanScore+1;
     }
     if (HChoice == "paper" && CChoice == "paper") {
-        console.log("No one wins");
+        document.getElementById("winner").textContent = "No one wins";
     }
     if (HChoice == "paper" && CChoice == "scissors") {
-        console.log("Computer player wins!");
+        document.getElementById("winner").textContent = "The winner is: computer player";
         computerScore = computerScore+1;
     }
     if (HChoice == "scissors" && CChoice == "rock") {
-        console.log("Computer player wins!");
+        document.getElementById("winner").textContent = "The winner is: computer player";
         computerScore = computerScore+1;
     }
     if (HChoice == "scissors" && CChoice == "paper") {
-        console.log("Human player wins!");
+        document.getElementById("winner").textContent = "The winner is: human player";
         humanScore = humanScore+1;
     }
     if (HChoice == "scissors" && CChoice == "scissors") {
-        console.log("No one wins");
+        document.getElementById("winner").textContent = "No one wins";
     }
 }
