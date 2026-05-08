@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     let nrand = Math.floor(Math.random()*3); //gives a random number from 0 to 2 
     //console.log(nrand);
@@ -36,9 +39,6 @@ humanchoice.addEventListener('click', (event) => {
     }
 });
 
-let humanScore = 0;
-let computerScore = 0;
-
 function playRound (HChoice) {
     const CChoice = getComputerChoice();
     document.getElementById("CC").textContent = "Your opponent choose: " + CChoice;
@@ -48,14 +48,17 @@ function playRound (HChoice) {
     if (HChoice == "rock" && CChoice == "paper") {
         document.getElementById("winner").textContent = "The winner is: computer player";
         computerScore = computerScore+1;
+        document.getElementById("scorenow").textContent = "Human: " + humanScore + " - Computer: " + computerScore;
     }
     if (HChoice == "rock" && CChoice == "scissors") {
         document.getElementById("winner").textContent = "The winner is: human player";
         humanScore = humanScore+1;
+        document.getElementById("scorenow").textContent = "Human: " + humanScore + " - Computer: " + computerScore;
     }
     if (HChoice == "paper" && CChoice == "rock") {
         document.getElementById("winner").textContent = "The winner is: human player";
         humanScore = humanScore+1;
+        document.getElementById("scorenow").textContent = "Human: " + humanScore + " - Computer: " + computerScore;
     }
     if (HChoice == "paper" && CChoice == "paper") {
         document.getElementById("winner").textContent = "No one wins";
@@ -63,14 +66,17 @@ function playRound (HChoice) {
     if (HChoice == "paper" && CChoice == "scissors") {
         document.getElementById("winner").textContent = "The winner is: computer player";
         computerScore = computerScore+1;
+        document.getElementById("scorenow").textContent = "Human: " + humanScore + " - Computer: " + computerScore;
     }
     if (HChoice == "scissors" && CChoice == "rock") {
         document.getElementById("winner").textContent = "The winner is: computer player";
         computerScore = computerScore+1;
+        document.getElementById("scorenow").textContent = "Human: " + humanScore + " - Computer: " + computerScore;
     }
     if (HChoice == "scissors" && CChoice == "paper") {
         document.getElementById("winner").textContent = "The winner is: human player";
         humanScore = humanScore+1;
+        document.getElementById("scorenow").textContent = "Human: " + humanScore + " - Computer: " + computerScore;
     }
     if (HChoice == "scissors" && CChoice == "scissors") {
         document.getElementById("winner").textContent = "No one wins";

@@ -52,3 +52,13 @@
     border-radius: 25px;
     align-self: stretch;
 }
+
+#score {
+    display: flex;
+    padding: 25px 25px 25px 25px;
+    flex-direction: column;
+    border: solid;
+    border-color: lightsalmon;
+    border-radius: 25px;
+    align-self: stretch;
+}
